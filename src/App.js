@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import OffComponent from "./components/OffComponent";
+import SubmitButton from "./components/SubmitButton";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -56,13 +57,11 @@ const App = () => {
                           </div>
                           {/*footer*/}
                           <div className="flex items-center justify-start p-6 ">
-                            <button
-                              className="bg-blue-500 text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                              type="button"
-                              onClick={() => setGetDiscount(true)}
-                            >
-                              50% Off For 6 Months
-                            </button>
+                            <SubmitButton
+                              text=" 50% Off For 6 Months"
+                              func={() => setGetDiscount(true)}
+                            />
+
                             <button
                               className="text-blue-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                               type="button"
