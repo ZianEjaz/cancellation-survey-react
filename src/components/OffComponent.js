@@ -55,10 +55,11 @@ const [back, setBack] = useState(false)
             />
             <div onClick={() => setdisplayTextarea(!displayTextarea)}>
               <RadioOption label="Found a better solution" />
+              </div>
               {displayTextarea === true ? (
                 <TextArea placeholder="What is the better solution? If you don't mind sharing, Your feedback is much appreciated!" />
               ) : null}
-            </div>
+            
 
             <RadioOption label="it's too expensive" />
             <div onClick={() => setBugsDisplay(!bugsDisplay)}>
